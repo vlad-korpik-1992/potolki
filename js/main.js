@@ -18,4 +18,23 @@ $(document).ready(function() {
 		adaptiveHeight: true,
 		centerMode: false,
 	});
+	$('.catalog__box__link').on('click', function (e) {
+        e.preventDefault();
+        let elem = e.target.parentNode;
+		console.log(elem);
+		let id = '1' + elem.getAttribute('id');
+		jQuery("#"+id).addClass('sidebar_active');
+		let idElem = elem.getAttribute('id');
+		$( "body" ).toggleClass('body_fixed');
+    });
+	$('.sidebar__back').on('click', function (e) {
+        e.preventDefault();
+        $('.sidebar').removeClass('sidebar_active');
+		$( "body" ).removeClass('body_fixed');
+    });
+	$('.sidebar__overlay').on('click', function (e) {
+        e.preventDefault();
+        $('.sidebar').removeClass('sidebar_active');
+		$( "body" ).removeClass('body_fixed');
+    });
 });
