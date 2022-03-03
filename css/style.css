@@ -799,7 +799,7 @@ body {
 }
 .reviews{
     position: relative;
-    padding-bottom: 57px;
+    padding-bottom: 75px;
 }
 .reviews__head{
     position: relative;
@@ -816,7 +816,7 @@ body {
 .reviws__head__link{
     display: flex;
     align-items: center;
-    margin-right: 15%;
+    margin-right: 30px;
 }
 .reviws__head__link p{
     font-size: 16px;
@@ -885,7 +885,7 @@ body {
 }
 .questions{
     position: relative;
-    padding-bottom: 25px;
+    padding-bottom: 85px;
 }
 .questions__box{
     display: flex;
@@ -947,7 +947,6 @@ body {
     display: none;
     padding: 10px 0 0 50px;
     line-height: 100%;
-    opacity: 0.7;
 }
 .questions__content_active{
     display: block;
@@ -1671,7 +1670,6 @@ body {
 }
 .category{
     position: relative;
-    padding-bottom: 85px;
 }
 .category__box{
     display: flex;
@@ -1728,6 +1726,202 @@ body {
 }
 .category__box__link:hover .category__box__icon{
     fill: #fff;
+}
+.globe{
+    position: relative;
+}
+.globe__title{
+    position: relative;
+    max-width: 1000px;
+    font-size: 72px;
+    line-height: 100%;
+    margin: 0 auto;
+    padding: 355px 15px 300px;
+    z-index: 2;
+}
+.globe__orbitouter{
+    position: absolute;
+    top: 0; 
+    left: 0;
+    right: 0;
+    content: '';
+    width: 790px;
+    height: 790px;
+    border-radius: 50%;
+    border: 1px solid #e3e3e3;
+    border-right: 1px solid #fff;
+    margin: 0 auto;
+    z-index: 1;
+    animation: spin 8s linear 0s infinite;
+}
+.globe__orbitaverage{
+    position: absolute;
+    top: 63px; 
+    left: 0;
+    right: 0;
+    content: '';
+    width: 664px;
+    height: 664px;
+    border-radius: 50%;
+    border: 1px solid #666666;
+    border-top: 1px solid #fff;
+    margin: 0 auto;
+    z-index: 1;
+    animation: spin 5s linear 0s infinite;
+}
+.globe__orbitinner{
+    position: absolute;
+    top: 164px; 
+    left: 0;
+    right: 0;
+    content: '';
+    width: 462px;
+    height: 462px;
+    border-radius: 50%;
+    border: 1px solid #000;
+    border-left: 1px solid #fff;
+    margin: 0 auto;
+    z-index: 1;
+    animation: spin 3s linear 0s infinite;
+}
+.stock{
+    position: relative;
+    border-bottom: 1px solid #e3e3e3;
+    margin-bottom: 5px;
+}
+.stock__box{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-bottom: 80px;
+}
+.stock__box__items{
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.stock__box__pic{
+    position: relative;
+}
+.stock__box__image{
+    border-bottom: 10px solid #e3201b;
+    clip-path: polygon(0 20%, 100% 0, 100% 100%, 0% 100%);
+}
+.stock__box__img{
+    border-top: 10px solid #e3201b;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+}
+.stock__box__circle{
+    position: absolute;
+    left: 15px;
+    bottom: 22px;
+    width: 58px;
+    height: 58px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.stock__box__link{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 25px;
+}
+.stock__box__text{
+    font-size: 24px;
+    line-height: 130%;
+    color: #000;
+    text-decoration: underline;    
+}
+.stock__box__btn{
+    flex: 0 0 145px;
+    max-width: 145px;
+    height: 45px;
+    border-radius: 30px;
+    margin-right: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #e3201b;
+    font-size: 21px;
+    line-height: 100%;
+    color: #fff;
+}
+.stock__box__link:hover .stock__box__btn{
+    cursor: pointer;
+}
+.work{
+    position: relative;
+    margin-top: -120px;
+}
+.stagesofwork{
+    position: relative;
+    padding: 20px 0 110px 0;
+}
+.stagesofwork__title{
+    font-size: 48px;
+    line-height: 100%;
+    padding-bottom: 30px;
+}
+.stagesofwork__box{
+    display: flex;
+    margin-left: -44px;
+    margin-right: -44px;
+}
+.stagesofwork__box__items{
+    flex: 0 0 25%;
+    max-width: 25%;
+    padding-left: 44px;
+    padding-right: 44px;
+}
+.stagesofwork__box__figure{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 68px 0;
+    max-width: 230px;
+    background-color: #e3201b;
+    border-radius: 30px;
+}
+.stagesofwork__box__items p{
+    font-size: 20px;
+    line-height: 100%;
+    font-weight: 500;
+    padding-top: 15px;
+}
+.stagesofwork__box__figure_circle{
+    border-radius: 50%;
+}
+.message{
+    position: relative;
+    padding: 0 0 85px 0;
+}
+.message__box{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+.message__box__maps{
+    position: relative;
+    flex: 0 0 30%;
+    max-width: 30%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.message__box__form{
+    position: relative;
+    display: flex;
+    flex: 0 0 70%;
+    max-width: 70%;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 @media (max-width: 1200px){
     .header__contacts__text{
@@ -1854,6 +2048,18 @@ body {
     .benefits__list::after{
         top: -52px;
         bottom: -53px;
+    }
+    .globe__title{
+        font-size: 60px;
+        padding: 270px 15px 370px;
+    }
+    .stagesofwork__box{
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+    .stagesofwork__box__items{
+        padding-left: 20px;
+        padding-right: 20px;
     }
 }
 @media (max-width: 992px){
@@ -2009,6 +2215,9 @@ body {
     .catalog__title{
         font-size: 40px;
     }
+    .stagesofwork__title{
+        font-size: 40px;
+    }
 }
 @media (max-width: 991px){
     .static__help{
@@ -2147,6 +2356,45 @@ body {
     }
     .static__column_center{
         text-align: center;
+    }
+    .globe__title{
+        font-size: 50px;
+    }
+    .globe__orbitouter{
+        width: 730px;
+        height: 730px;
+    }
+    .globe__orbitaverage{
+        width: 600px;
+        height: 600px;
+    }
+    .globe__orbitinner{
+        width: 400px;
+        height: 400px;
+    }
+    .stock__box{
+        margin-right: -15px;
+        margin-left: -15px;
+    }
+    .stock__box__items{
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-bottom: 30px;
+    }
+    .stock__box__items:last-child{
+        margin-bottom: 0;
+    }
+    .work{
+        margin-top: -90px;
+    }
+    .stagesofwork__box{
+        overflow-x: scroll;
+    }
+    .stagesofwork__box__items{
+        flex: 0 0 260px;
+        max-width: 260px;
     }
 }
 @media (max-width: 767px){
@@ -2449,6 +2697,26 @@ body {
         left: 20px;
         right: 20px;
     }
+    .globe__title{
+        font-size: 38px;
+        text-align: center;
+        padding: 195px 15px 200px;
+    }
+    .globe__orbitouter{
+        width: 538px;
+        height: 538px;
+    }
+    .globe__orbitaverage{
+        width: 400px;
+        height: 400px;
+    }
+    .globe__orbitinner{
+        width: 200px;
+        height: 200px;
+    }
+    .stagesofwork__title{
+        font-size: 33px;
+    }
 }
 @media (max-width: 576px){
     .about__box__items{
@@ -2501,6 +2769,43 @@ body {
     .hero__box__items p{
         font-size: 14px;
     }
+    .globe__title{
+        font-size: 24px;
+        padding: 160px 15px 130px;
+    }
+    .globe__orbitouter{
+        width: 385px;
+        height: 385px;
+    }
+    .globe__orbitaverage{
+        width: 300px;
+        height: 300px;
+    }
+    .globe__orbitinner{
+        width: 200px;
+        height: 200px;
+        top: 110px;
+    }
+    .stock__box{
+        padding-bottom: 60px;
+    }
+    .stock__box__link{
+        flex-wrap: wrap;
+    }
+    .stock__box__text{
+        font-size: 21px;
+        margin-bottom: 15px;
+    }
+    .stock__box__btn{
+        font-size: 18px;
+    }
+    .stock__box__circle{
+        width: 48px;
+        height: 48px;
+    }
+    .stagesofwork{
+        padding: 20px 0px 60px;
+    }
 }
 @media (max-width: 425px){
     .footer__jobs h4{
@@ -2508,6 +2813,23 @@ body {
     }
     .question__map__gif{
         max-width: 120px;
+    }
+    .globe__orbitouter{
+        width: 290px;
+        height: 290px;
+    }
+    .globe__orbitaverage{
+        width: 215px;
+        height: 215px;
+        top: 50px;
+    }
+    .globe__orbitinner{
+        width: 115px;
+        height: 115px;
+        top: 100px;
+    }
+    .globe__title{
+        padding: 110px 0 100px;
     }
 }
 @media (min-width: 576px) and (max-width: 991px){
