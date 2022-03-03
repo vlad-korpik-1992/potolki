@@ -499,21 +499,32 @@
                     <img class="question__map__gif" src="img/map_title.svg" alt="">
                 </div>
                 <form class="message__box__form" action="#">
-                    <div class="calculation__col">
+                    <div class="calculation__col message__box__col">
                         <div class="calculation__col__groups">
-                            <label class="calculation__col__label" for="s">Площадь помещения в м.кв.</label>
-                            <input class="calculation__col__input" type="text" name="s" id="s">
+                            <label class="calculation__col__label" for="name">Имя</label>
+                            <input class="calculation__col__input" type="text" name="name" id="name">
                         </div>
                         <div class="calculation__col__groups">
-                            <label class="calculation__col__label" for="corners">Углов</label>
-                            <input class="calculation__col__input" type="text" name="corners" id="corners">
+                            <label class="calculation__col__label" for="phone">Телефон</label>
+                            <input class="calculation__col__input" type="text" name="phone" id="phone">
                         </div>
                     </div>
-                    <div class="calculation__col">
-                        <div class="calculation__col__groups">
-                            <label class="calculation__col__label" for="s">Площадь помещения в м.кв.</label>
-                            <input class="calculation__col__input" type="text" name="s" id="s">
+                    <div class="calculation__col message__box__col">
+                        <div class="calculation__col__groups calculation__col__groups_before">
+                            <p class="message__box__text">Остались вопросы?</p>
+                            <p class="message__box__text">Скорее задавайте и мы ответим вам в кратчайшие сроки. Работаем по всей Литве</p>
                         </div>
+                    </div>
+                    <div class="message__box__form__row">
+                        <label class="calculation__col__label calculation__col__label_left" for="name">Текст сообщения</label>
+                        <textarea class="calculation__col__input calculation__col__input_textarea" name="message" id="" cols="40" rows="40"></textarea>
+                    </div>
+                    <div class="calculation__col calculation__col_ml">
+                        <button class="message__box__btn" type="submit">
+                            <svg class="calculation__col__svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <image  x="0px" y="0px" width="64px" height="24px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAAAYCAQAAADgvTPPAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfmAhYLLSuDuEVSAAAA0UlEQVRIx8XWPQrCQBRF4TNpRAVF4hasbW0UfzbgflyDva7CFQQsbdSsIJ2ViLgAuVaCJpP25qV8xfkYMiFBWGbCgh3PyEae5y4pV1rdJJ4D4AKMyUibOoGujpKkXMP/jQtQS/ABaghOQJTgBUQIbkCF4AeUCEFdVrRMX4Pv9NjSBwrmQQfW5vzv3BLeDebhHdRmScec7bBhBBRMm3gJ+zpJkq5Km7gFf3k/oJR3Ayp5LyCSdwKieR+gJu8DZJKkswbljQvwiOdFsP2Wz9jzqi4+V/GLz7+IGpcAAAAASUVORK5CYII=" />
+                            </svg>
+                        </button>
                     </div>
                 </form>
             </div>
