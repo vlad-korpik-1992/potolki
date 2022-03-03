@@ -544,6 +544,35 @@
             </div>
         </div>
     </section>
+    <section id="popup" class="popup">
+        <a href="#" class="popup__area"></a>
+        <div class="popup__body">
+            <div class="popup__content">
+                <div class="popup__header">
+                    <button class="popup__header_close">X</button>
+                    <div class="popup__title">Заказать звонок</div>
+                </div>
+                <div class="popup__text">
+                    <form class="ajax__form" method="post" id="ajax__form">
+                        <div class="form__group">
+                            <div class="form__label">Ваше имя*</div>
+                            <input type="text" class="form__group_text" required="required" id="name" name="name" value="">
+                        </div>
+                        <div class="form__group">
+                            <div class="form__label">Номер телефона*</div>
+                            <input type="text" class="form__group_text" required="required" id="phone" name="phone" value="">
+                        </div>
+                        <div class="form__group">
+                            <div class="form__group__error error" id="status__error"></div>
+                        </div>
+                        <div class="form__group">
+                            <button id="send" class="form__btn">Отправить</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/main.js"></script>

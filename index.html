@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/magnific-popup.css">
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Главная</title>
@@ -431,24 +432,24 @@
         <div class="wrapper">
             <h2 class="sidebar__title sidebar__title_top">Наши работы</h2>
             <div class="sidebar__photos">
-                <div class="sidebar__photos__items">
+                <a class="sidebar__photos__items" href="img/sidebar_img_catalog.jpg">
                     <img class="sidebar__photos__img" src="img/sidebar_img_catalog.jpg" alt="">
-                </div>
-                <div class="sidebar__photos__items">
+                </a>
+                <a class="sidebar__photos__items" href="img/sidebar_img_catalog.jpg">
                     <img class="sidebar__photos__img" src="img/sidebar_img_catalog.jpg" alt="">
-                </div>
-                <div class="sidebar__photos__items">
+                </a>
+                <a class="sidebar__photos__items" href="img/sidebar_img_catalog.jpg">
                     <img class="sidebar__photos__img" src="img/sidebar_img_catalog.jpg" alt="">
-                </div>
-                <div class="sidebar__photos__items">
+                </a>
+                <a class="sidebar__photos__items" href="img/sidebar_img_catalog.jpg">
                     <img class="sidebar__photos__img" src="img/sidebar_img_catalog.jpg" alt="">
-                </div>
-                <div class="sidebar__photos__items">
+                </a>
+                <a class="sidebar__photos__items" href="img/sidebar_img_catalog.jpg">
                     <img class="sidebar__photos__img" src="img/sidebar_img_catalog.jpg" alt="">
-                </div>
-                <div class="sidebar__photos__items">
+                </a>
+                <a class="sidebar__photos__items" href="img/sidebar_img_catalog.jpg">
                     <img class="sidebar__photos__img" src="img/sidebar_img_catalog.jpg" alt="">
-                </div>
+                </a>
             </div>
         </div>
     </section>
@@ -771,9 +772,39 @@
             </svg>
         </a>
     </section>
+    <section id="popup" class="popup">
+        <a href="#" class="popup__area"></a>
+        <div class="popup__body">
+            <div class="popup__content">
+                <div class="popup__header">
+                    <button class="popup__header_close">X</button>
+                    <div class="popup__title">Заказать звонок</div>
+                </div>
+                <div class="popup__text">
+                    <form class="ajax__form" method="post" id="ajax__form">
+                        <div class="form__group">
+                            <div class="form__label">Ваше имя*</div>
+                            <input type="text" class="form__group_text" required="required" id="name" name="name" value="">
+                        </div>
+                        <div class="form__group">
+                            <div class="form__label">Номер телефона*</div>
+                            <input type="text" class="form__group_text" required="required" id="phone" name="phone" value="">
+                        </div>
+                        <div class="form__group">
+                            <div class="form__group__error error" id="status__error"></div>
+                        </div>
+                        <div class="form__group">
+                            <button id="send" class="form__btn">Отправить</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/masonry.pkgd.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

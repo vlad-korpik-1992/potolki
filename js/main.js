@@ -21,7 +21,6 @@ $(document).ready(function() {
 	$('.catalog__box__link').on('click', function (e) {
         e.preventDefault();
         let elem = e.target.parentNode;
-		console.log(elem);
 		let id = '1' + elem.getAttribute('id');
 		jQuery("#"+id).addClass('sidebar_active');
 		let idElem = elem.getAttribute('id');
@@ -76,4 +75,59 @@ $(document).ready(function() {
 			}
 		]
 	  });
+	$('.sidebar__photos').magnificPopup({
+		delegate: 'a',
+		type: 'image',
+		tLoading: 'Loading image #%curr%...',
+		mainClass: 'mfp-img-mobile',
+		gallery: {
+			enabled: true,
+			navigateByImgClick: true,
+			preload: [0,1]
+		},
+		image: {
+			tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+			titleSrc: function(item) {
+				return '<small>Наши работы</small>';
+			}
+		}
+	});
+	$('.questions__certificates__box').magnificPopup({
+		delegate: 'a',
+		type: 'image',
+		tLoading: 'Loading image #%curr%...',
+		mainClass: 'mfp-img-mobile',
+		gallery: {
+			enabled: true,
+			navigateByImgClick: true,
+			preload: [0,1]
+		},
+		image: {
+			tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+			titleSrc: function(item) {
+				return '<small>Сертификаты</small>';
+			}
+		}
+	});
+	let openButton = document.querySelector(".static__help__btn");
+    let closeButton = document.querySelector(".popup__header_close");
+    let popup = document.querySelector(".popup");
+    let popupBody = document.querySelector(".popup__area");
+
+    openButton.addEventListener("click", function(){
+        popup.classList.toggle("open");
+    });
+                
+    closeButton.addEventListener("click", function(){
+        popup.classList.toggle("open");
+        $('#ajax__form').trigger('reset');
+        $("#status__error").empty()
+    });
+
+    popupBody.addEventListener("click", function(e){
+        e.preventDefault();
+        popup.classList.toggle("open");
+        $('#ajax__form').trigger('reset');
+        $("#status__error").empty()
+    });
 });

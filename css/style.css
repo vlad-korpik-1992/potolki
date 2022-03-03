@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300&display=swap');
 
-*,
-*::before,
-*::after {
+*,*::before,*::after {
     padding: 0;
     margin: 0;
     border: 0;
@@ -11,9 +9,7 @@
 a {
     text-decoration: none;
 }
-ul,
-ol,
-li {
+ul, ol, li {
     list-style: none;
 }
 img {
@@ -1093,7 +1089,7 @@ body {
     margin-bottom: 30px;
 }
 .price__box__title:before{
-    width: 1px;
+    width: 3px;
 }
 .price__box__btn{
     max-width: 280px;
@@ -1808,10 +1804,18 @@ body {
 }
 .stock__box__image{
     border-bottom: 10px solid #e3201b;
+    -moz-clip-path: polygon(0 20%, 100% 0, 100% 100%, 0% 100%);
+    -ms-clip-path: polygon(0 20%, 100% 0, 100% 100%, 0% 100%);
+    -webkit-clip-path: polygon(0 20%, 100% 0, 100% 100%, 0% 100%);
+    -o-clip-path: polygon(0 20%, 100% 0, 100% 100%, 0% 100%);
     clip-path: polygon(0 20%, 100% 0, 100% 100%, 0% 100%);
 }
 .stock__box__img{
     border-top: 10px solid #e3201b;
+    -moz-clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+    -ms-clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+    -o-clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
     clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
 }
 .stock__box__circle{
@@ -1977,6 +1981,146 @@ body {
 }
 .message__box__text:last-child{
     padding-bottom: 0;
+}
+.mfp-bg{
+    z-index: 999999;
+}
+.mfp-wrap{
+    z-index: 999999;
+}
+.popup{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.8);
+	top: 0;
+	left: 0;
+	z-index: 999999;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.8s ease 0s;
+}
+.popup.open{
+	opacity: 1;
+	visibility: visible;
+}
+.popup.open .popup__content{
+	transform: perspective(600px) translate(0px, 0px) rotateX(0deg);
+	opacity: 1;
+	width: 500px;
+}
+.popup__area{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+.popup__body{
+	min-height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 30px 10px;
+}
+.popup__content{
+	position: relative;
+	background-color: #fff;
+	color: #000;
+	max-width: 700px;
+	padding: 0px 30px 30px;
+	transition: all 0.8s ease 0s;
+	opacity: 0;
+	transform: perspective(600px) translate(0px, -100px) rotateX(45deg);
+}
+.popup__header{
+	margin: 0 -30px 30px;
+    border-bottom: 1px solid #e9ecef;
+}
+.popup__header_close{
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	font-size: 20px;
+	color: #000;
+	opacity: 0.7;
+	text-decoration: none;
+	background-color: transparent;
+	border: none;
+}
+.popup__header_close:hover{
+	cursor: pointer;
+}
+.popup__text{
+	display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.ajax__form{
+	min-width: 100%;
+}
+.popup__title{
+	font-size: 28px;
+    margin: 10px 0px 15px 30px;
+}
+.form__group{
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px 0px 30px;
+}
+.form__label{
+	padding-bottom: 15px;
+    font-weight: 500;
+    font-size: 18px;
+    color: #000;
+}
+.form__group_text{
+	color: #000;
+    width: 100%;
+    padding: 8px 20px;
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    height: 40px;
+}
+.form__btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e3201b;
+    color: #fff;
+    padding: 12px 0px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    height: 50px;
+    border: none;
+    width: 60%;
+    transition: all 0.3s ease 0s;
+	margin-bottom: -30px;
+}
+.form__btn:hover{
+	cursor: pointer;
+    background-color: #c21e19;
+}
+.status__form{
+	display: flex;
+	justify-content: center;
+	color: #008000;
+    font-size: 18px;
+    font-weight: 500;
+}
+.form__error{
+	margin-top: 15px;
+	transition: all 0.3s ease 0s;
+}
+.form__group__error{
+	color: #008000;
+    font-size: 18px;
+    font-weight: 500;
+}
+.error{
+	color: #f44336 !important;
 }
 @media (max-width: 1200px){
     .header__contacts__text{
@@ -2778,6 +2922,10 @@ body {
     }
     .benefits__list::after{
         top: 0;
+        -moz-clip-path: polygon(0% 0px, 100% 0%, 100% 93%, 50% 100%, 0px 93%, 0px 7%);
+        -ms-clip-path: polygon(0% 0px, 100% 0%, 100% 93%, 50% 100%, 0px 93%, 0px 7%);
+        -webkit-clip-path: polygon(0% 0px, 100% 0%, 100% 93%, 50% 100%, 0px 93%, 0px 7%);
+        -o-clip-path: polygon(0% 0px, 100% 0%, 100% 93%, 50% 100%, 0px 93%, 0px 7%);
         clip-path: polygon(0% 0px, 100% 0%, 100% 93%, 50% 100%, 0px 93%, 0px 7%);
     }
     .category__box__items{
